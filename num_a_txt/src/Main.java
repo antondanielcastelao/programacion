@@ -48,7 +48,8 @@ public class Main {
         String[] cifras = n_string.split("");
 
         // Creamos dos strings, una para decenas y otra para unidades
-        String dec, un;
+        String dec = null;
+        String un = null;
 
         // Definimos los diferentes casos para representar las decenas.
         switch (cifras[0]) {
@@ -98,5 +99,7 @@ public class Main {
         // Ahora, cerramos el escaner
         sc.close();
 
+        // Finalmente, damos al usuario la salida de texto del numero el letras en vez de cifras
+        System.out.println("El numero introducido es: " + dec + un);
     }
 }

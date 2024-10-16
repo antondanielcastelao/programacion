@@ -45,13 +45,13 @@ public class Main {
         // Convertimos el numero a string y separamos sus cifras
         String n_string = Integer.toString(ninput);
         // Ahora, caracteres[0] son las decenas y caracteres[1] son las unidades.
-        String[] caracteres = n_string.split("");
+        String[] cifras = n_string.split("");
 
         // Creamos dos strings, una para decenas y otra para unidades
         String dec, un;
 
         // Definimos los diferentes casos para representar las decenas.
-        switch (caracteres[0]) {
+        switch (cifras[0]) {
             case "1":
                 dec = "dieci";
             case "2":
@@ -72,6 +72,31 @@ public class Main {
                 dec = "noventa y ";
 
         }
+
+        // Definimos los casos para las unidades
+        switch (cifras[1]) {
+            case "1":
+                un = "uno";
+            case "2":
+                un = "dos";
+            case "3":
+                un = "tres";
+            case "4":
+                un = "cuatro";
+            case "5":
+                un = "cinco";
+            case "6":
+                un = "seis";
+            case "7":
+                un = "siete";
+            case "8":
+                un = "ocho";
+            case "9":
+                un = "nueve";
+        }
+
+        // Ahora, cerramos el escaner
+        sc.close();
 
     }
 }

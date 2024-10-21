@@ -55,45 +55,62 @@ public class Main {
         switch (cifras[0]) {
             case "1":
                 dec = "dieci";
+                break;
             case "2":
                 dec = "veinti";
+                break;
             case "3":
                 dec = "treinta y ";
+                break;
             case "4":
                 dec = "cuarenta y ";
+                break;
             case "5":
                 dec = "cincuenta y ";
+                break;
             case "6":
                 dec = "sesenta y ";
+                break;
             case "7":
                 dec = "setenta y ";
+                break;
             case "8":
                 dec = "ochenta y ";
+                break;
             case "9":
                 dec = "noventa y ";
-
+                break;
         }
 
         // Definimos los casos para las unidades
         switch (cifras[1]) {
             case "1":
                 un = "uno";
+                break;
             case "2":
                 un = "dos";
+                break;
             case "3":
                 un = "tres";
+                break;
             case "4":
                 un = "cuatro";
+                break;
             case "5":
                 un = "cinco";
+                break;
             case "6":
                 un = "seis";
+                break;
             case "7":
                 un = "siete";
+                break;
             case "8":
                 un = "ocho";
+                break;
             case "9":
                 un = "nueve";
+                break;
         }
 
         // Ahora, cerramos el escaner

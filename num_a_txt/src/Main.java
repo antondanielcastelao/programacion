@@ -7,39 +7,62 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
+        //debug_todos_casos();
+        usuario();
+    }
 
+    public static void debug_todos_casos() {
+        Integer x = 1;
+        while (x < 100) {
+            System.out.println(x);
+            System.out.println(logica(x));
+            x +=1;
+        }
+    }
+
+    // Funcion para input del usuario
+    public static void usuario() {
         Scanner sc = new Scanner(System.in);
 
         // Pedimos el numero y lo almacenamos
         System.out.println("Porfavor, introduce un numero del 1 al 99: ");
         int ninput = sc.nextInt();
 
-        // Si el numero no se encuentra el rango, el programa se cierra y da error
-        if (ninput <1 || ninput > 99) {
-            System.err.println("ERROR, el numero no está entre 1 y 99");
-            System.exit(1);
+
+        String func = logica(ninput);
+        // Ahora, cerramos el escaner
+        sc.close();
+
+        // Finalmente, damos al usuario la salida de texto del numero el letras en vez de cifras
+        System.out.println(func);
+    }
+
+    public static String logica(int ninput) {
+        if (ninput < 1 || ninput > 99) {
+            // Verificamos que el numero este entre 1 y 99
+            return("ERROR, el numero no está entre 1 y 99");
         }
 
         // Evitamos los casos en los que los numeros no tienen nombres compuestos.
         switch (ninput) {
             case 10:
-                System.out.println("Diez");
-                System.exit(0);
+                return("Diez");
+
             case 11:
-                System.out.println("Once");
-                System.exit(0);
+                return("Once");
+
             case 12:
-                System.out.println("Doce");
-                System.exit(0);
+                return("Doce");
+
             case 13:
-                System.out.println("Trece");
-                System.exit(0);
+                return("Trece");
+
             case 14:
-                System.out.println("Catorce");
-                System.exit(0);
+                return("Catorce");
+
             case 15:
-                System.out.println("Quince");
-                System.exit(0);
+                return("Quince");
+
         }
 
         // Convertimos el numero a string y separamos sus cifras
@@ -82,7 +105,7 @@ public class Main {
                 break;
         }
         if (Integer.parseInt(cifras[1]) != 0) {
-            if (Integer.parseInt(cifras[0]) == 1 ) {
+            if (Integer.parseInt(cifras[0]) == 1) {
                 dec = "dieci";
             } else if (Integer.parseInt(cifras[0]) == 2) {
                 dec = "veinti";
@@ -120,15 +143,9 @@ public class Main {
                     break;
             }
         } else {
-            System.out.println("El numero introducido es: " + dec);
-            System.exit(0);
+            return("El numero introducido es: " + dec);
         }
 
-
-        // Ahora, cerramos el escaner
-        sc.close();
-
-        // Finalmente, damos al usuario la salida de texto del numero el letras en vez de cifras
-        System.out.println("El numero introducido es: " + dec + un);
+        return("El numero introducido es: " + dec + un);
     }
 }

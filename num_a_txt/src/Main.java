@@ -54,64 +54,76 @@ public class Main {
         // Definimos los diferentes casos para representar las decenas.
         switch (cifras[0]) {
             case "1":
-                dec = "dieci";
+                dec = "diez";
                 break;
             case "2":
-                dec = "veinti";
+                dec = "veinte";
                 break;
             case "3":
-                dec = "treinta y ";
+                dec = "treinta";
                 break;
             case "4":
-                dec = "cuarenta y ";
+                dec = "cuarenta";
                 break;
             case "5":
-                dec = "cincuenta y ";
+                dec = "cincuenta";
                 break;
             case "6":
-                dec = "sesenta y ";
+                dec = "sesenta";
                 break;
             case "7":
-                dec = "setenta y ";
+                dec = "setenta";
                 break;
             case "8":
-                dec = "ochenta y ";
+                dec = "ochenta";
                 break;
             case "9":
-                dec = "noventa y ";
+                dec = "noventa";
                 break;
+        }
+        if (Integer.parseInt(cifras[1]) != 0) {
+            if (Integer.parseInt(cifras[0]) == 1 ) {
+                dec = "dieci";
+            } else if (Integer.parseInt(cifras[0]) == 2) {
+                dec = "veinti";
+            } else {
+                dec = dec + " y ";
+            }
+            // Definimos los casos para las unidades
+            switch (cifras[1]) {
+                case "1":
+                    un = "uno";
+                    break;
+                case "2":
+                    un = "dos";
+                    break;
+                case "3":
+                    un = "tres";
+                    break;
+                case "4":
+                    un = "cuatro";
+                    break;
+                case "5":
+                    un = "cinco";
+                    break;
+                case "6":
+                    un = "seis";
+                    break;
+                case "7":
+                    un = "siete";
+                    break;
+                case "8":
+                    un = "ocho";
+                    break;
+                case "9":
+                    un = "nueve";
+                    break;
+            }
+        } else {
+            System.out.println("El numero introducido es: " + dec);
+            System.exit(0);
         }
 
-        // Definimos los casos para las unidades
-        switch (cifras[1]) {
-            case "1":
-                un = "uno";
-                break;
-            case "2":
-                un = "dos";
-                break;
-            case "3":
-                un = "tres";
-                break;
-            case "4":
-                un = "cuatro";
-                break;
-            case "5":
-                un = "cinco";
-                break;
-            case "6":
-                un = "seis";
-                break;
-            case "7":
-                un = "siete";
-                break;
-            case "8":
-                un = "ocho";
-                break;
-            case "9":
-                un = "nueve";
-                break;
-        }
 
         // Ahora, cerramos el escaner
         sc.close();

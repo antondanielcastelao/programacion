@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.math.*;
 
 public class Main {
     static public Scanner sc = new Scanner(System.in);
@@ -50,7 +51,7 @@ public class Main {
                 ejercicio2();
                 break;
             case 1:
-                System.out.println("Área del cuadrado, por favor introduce:");
+                System.out.println("Área del cuadrado, por favor introduce el lado");
                 break;
             case 2:
                 System.out.println("Área del triángulo, por favor introduce:");
@@ -60,6 +61,14 @@ public class Main {
                 break;
         }
     }
-
+    public static double acuadrado(double lado) {
+        return lado*lado;
+    }
+    public static double atriangulo(double altura, double base) {
+        return (base*altura)/2;
+    }
+    public static double aciruclo(double radio) {
+        return   Math.PI*Math.pow(radio, 2);
+    }
 
 }

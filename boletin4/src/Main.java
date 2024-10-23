@@ -10,8 +10,9 @@ public class Main {
         System.out.println("--- Ejercicio 1 ---");
         //ejercicio1();
         System.out.println("--- Ejercicio 2 ---");
-        ejercicio2();
-
+        //ejercicio2();
+        System.out.println("--- Ejercicio 3 ---");
+        ejercicio3();
     }
 
     public static void ejercicio1() {
@@ -67,6 +68,15 @@ public class Main {
                 break;
         }
     }
+
+    public static void ejercicio3(){
+        System.out.println("Introduce el numero para calcular el valor absoluto");
+        double n = sc.nextDouble();
+        // Si n es mayor que 0, dejarlo tal cual, si es menor (n negativo) ponemos el operador - para hacerlo positivo
+        double absoluto = (n > 0)? (n = n) : (n = -n);
+        System.out.println("El valor absoluto es " + Double.toString(absoluto));
+    }
+
     public static double acuadrado(double lado) {
         return lado*lado;
     }

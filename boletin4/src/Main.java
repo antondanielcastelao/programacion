@@ -7,12 +7,14 @@ public class Main {
 
     public static void main(String[] args) {
         //Scanner sc = new Scanner(System.in);
-        System.out.println("--- Ejercicio 1 ---");
+        System.out.println("\n--- Ejercicio 1 ---\n");
         //ejercicio1();
-        System.out.println("--- Ejercicio 2 ---");
+        System.out.println("\n--- Ejercicio 2 ---\n");
         //ejercicio2();
-        System.out.println("--- Ejercicio 3 ---");
-        ejercicio3();
+        System.out.println("\n--- Ejercicio 3 ---\n");
+        //ejercicio3();
+        System.out.println("\n--- Ejercicio 4 ---\n");
+        ejercicio4();
     }
 
     public static void ejercicio1() {
@@ -77,6 +79,155 @@ public class Main {
         System.out.println("El valor absoluto es " + Double.toString(absoluto));
     }
 
+    public static void ejercicio4() {
+        System.out.println("Introduce un numero para traducir a texto:");
+        int ninput = sc.nextInt();
+        if (ninput < 1 || ninput > 99) {
+            // Verificamos que el numero este entre 1 y 99
+            System.err.println("ERROR, el numero no está entre 1 y 99");
+            ejercicio4();
+        }
+        if (ninput < 10) {
+            switch (ninput){
+                case 1-> {
+                    System.out.println("uno");
+                }
+                case 2-> {
+                    System.out.println("dos");
+                }
+                case 3-> {
+                    System.out.println("tres");
+                }
+                case 4-> {
+                    System.out.println("cuatro");
+                }
+                case 5-> {
+                    System.out.println("cinco");
+                }
+                case 6-> {
+                    System.out.println("seis");
+                }
+                case 7-> {
+                    System.out.println("siete");
+                }
+                case 8-> {
+                    System.out.println("ocho");
+                }
+                case 9-> {
+                    System.out.println("nueve");
+                }
+            }
+
+        } else{
+        // Evitamos los casos en los que los numeros no tienen nombres compuestos.
+        switch (ninput) {
+            case 10:
+                System.out.println("Diez");
+                break;
+            case 11:
+                System.out.println("Once");
+                break;
+            case 12:
+                System.out.println("Doce");
+                break;
+            case 13:
+                System.out.println("Trece");
+                break;
+            case 14:
+                System.out.println("Catorce");
+                break;
+            case 15:
+                System.out.println("Quince");
+                break;
+            default:
+                // Convertimos el numero a string y separamos sus cifras
+                String n_string = Integer.toString(ninput);
+                // Ahora, caracteres[0] son las decenas y caracteres[1] son las unidades.
+                String[] cifras = n_string.split("");
+
+                // Creamos dos strings, una para decenas y otra para unidades
+                String dec = null;
+                String un = null;
+
+                // Definimos los diferentes casos para representar las decenas.
+                switch (cifras[0]) {
+                    case "1":
+                        dec = "diez";
+                        break;
+                    case "2":
+                        dec = "veinte";
+                        break;
+                    case "3":
+                        dec = "treinta";
+                        break;
+                    case "4":
+                        dec = "cuarenta";
+                        break;
+                    case "5":
+                        dec = "cincuenta";
+                        break;
+                    case "6":
+                        dec = "sesenta";
+                        break;
+                    case "7":
+                        dec = "setenta";
+                        break;
+                    case "8":
+                        dec = "ochenta";
+                        break;
+                    case "9":
+                        dec = "noventa";
+                        break;
+                }
+                if (Integer.parseInt(cifras[1]) != 0) {
+                    if (Integer.parseInt(cifras[0]) == 1) {
+                        dec = "dieci";
+                    } else if (Integer.parseInt(cifras[0]) == 2) {
+                        dec = "veinti";
+                    } else {
+                        dec = dec + " y ";
+                    }
+                    // Definimos los casos para las unidades
+                    switch (cifras[1]) {
+                        case "1":
+                            un = "uno";
+                            break;
+                        case "2":
+                            un = "dos";
+                            break;
+                        case "3":
+                            un = "tres";
+                            break;
+                        case "4":
+                            un = "cuatro";
+                            break;
+                        case "5":
+                            un = "cinco";
+                            break;
+                        case "6":
+                            un = "seis";
+                            break;
+                        case "7":
+                            un = "siete";
+                            break;
+                        case "8":
+                            un = "ocho";
+                            break;
+                        case "9":
+                            un = "nueve";
+                            break;
+                    }
+                } else {
+                    System.out.println("El numero introducido es: " + dec);
+                }
+                System.out.println("El numero introducido es: " + dec + un);
+        }
+        }
+    }
+
+    public static void ejercicio5(){
+        System.out.println("--- Ejercicio 5 ---");
+    }
     public static double acuadrado(double lado) {
         return lado*lado;
     }

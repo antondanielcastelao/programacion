@@ -44,7 +44,7 @@ public class Main {
         // pedimos al usuario el numero y lo escaneamos
         //Scanner sc = new Scanner(System.in);
         int opcion = sc.nextInt();
-        // definimos las posibilidades del usuario
+        // definimos las posibilidades del usuario y calculamos pidiendo los datos necesarios
         switch (opcion) {
             default:
                 System.err.println("Porfavor, indica una opcion valida.");
@@ -52,12 +52,18 @@ public class Main {
                 break;
             case 1:
                 System.out.println("Área del cuadrado, por favor introduce el lado");
+                System.out.println("El área del cuadrado es " + Double.toString(acuadrado(sc.nextDouble())) + " cm.");
                 break;
             case 2:
-                System.out.println("Área del triángulo, por favor introduce:");
+                System.out.println("Área del triángulo, por favor introduce la base");
+                double b = sc.nextDouble();
+                System.out.println("Por favor, introduce la altura");
+                double a = sc.nextDouble();
+                System.out.println("La altura del triángulo es " + Double.toString(atriangulo(a, b)) + " cm.");
                 break;
             case 3:
-                System.out.println("Área del círculo, por favor introduce:");
+                System.out.println("Área del círculo, por favor introduce el radio");
+                System.out.println("El área del círculo es " + Double.toString(aciruclo(sc.nextDouble())) + " cm.");
                 break;
         }
     }

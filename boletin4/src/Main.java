@@ -15,6 +15,8 @@ public class Main {
         //ejercicio3();
         System.out.println("\n--- Ejercicio 4 ---\n");
         ejercicio4();
+        System.out.println("\n--- Ejercicio 5 ---\n");
+        ejercicio5();
     }
 
     public static void ejercicio1() {
@@ -80,6 +82,7 @@ public class Main {
     }
 
     public static void ejercicio4() {
+
         System.out.println("Introduce un numero para traducir a texto:");
         int ninput = sc.nextInt();
         if (ninput < 1 || ninput > 99) {
@@ -226,7 +229,18 @@ public class Main {
     }
 
     public static void ejercicio5(){
-        System.out.println("--- Ejercicio 5 ---");
+        // recogemos del usuario el numero del dni
+        System.out.println("Por favor, introduce tu NIF sin letra");
+        int nif = sc.nextInt();
+        // hacemos el calculo
+        int letra = nif %23;  // era 23, te confundiste en el enunciado del ejercicio
+        // inicializamos la variable DNI para almacenar el numero y la letra
+        String dni = Integer.toString(nif);
+        // ahora mediante una lista indexada escogeremos la letra
+        String[] diccionario = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+        // concatenamos la letra con el numero y la imprimimos por pantalla
+        dni = dni + diccionario[letra];
+        System.out.println(dni);
     }
     public static double acuadrado(double lado) {
         return lado*lado;

@@ -103,15 +103,22 @@ public class Main {
         for (int i=0; i < salarios.length; i++){
 
             System.out.println(salarios[i]);
+            // Cuando el salario es 0, rompemos el bucle
             if (salarios[i] <= 0) {
                 break;
             }
             // si cumplimos con las condiciones, aumentamos el contador
             if(salarios[i]>=1000 && salarios[i]<=1750){
                 srango++;
-            } else if(salarios[i]<1000 && salarios[i]>0){
+            } else if(salarios[i]<1000){
                 mileuristas++;
             }
         }
+        // Calculamos el porcenaje
+        int pmileuristas = mileuristas/salarios.length*100 ;
+
+        // Imprimimos los datos
+        System.out.println("Tenemos " + srango + " trabajadores con el salario en el rango, y el porcentaje de gente que cobra menos de 1000 euros es " + pmileuristas);
+
     }
 }

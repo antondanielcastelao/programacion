@@ -95,13 +95,12 @@ public class Main {
 
     public static void ej5(){
         // Creamos la lista de salarios
-        double[] salarios = {999, 1400, 3000, 1300, 0};
+        double[] salarios = {100, 100, 999, 1400, 3000, 1300, 0};
         // Creamos la variable que almacenara los saldos en rango y la que almacenara el porcentaje de los que cobran menos de 1K
         int srango=0,mileuristas=0;
 
         // Iteramos entre los saldos con un bucle y vamos contando los que cumplen las condiciones para los contadores
         for (int i=0; i < salarios.length; i++){
-
             System.out.println(salarios[i]);
             // Cuando el salario es 0, rompemos el bucle
             if (salarios[i] <= 0) {
@@ -115,10 +114,10 @@ public class Main {
             }
         }
         // Calculamos el porcenaje
-        int pmileuristas = mileuristas/salarios.length*100 ;
+        double pmileuristas = ((double)mileuristas/((double)salarios.length-1))*100 ;
 
         // Imprimimos los datos
-        System.out.println("Tenemos " + srango + " trabajadores con el salario en el rango, y el porcentaje de gente que cobra menos de 1000 euros es " + pmileuristas);
+        System.out.println("Tenemos " + srango + " trabajadores con el salario en el rango, y el porcentaje de gente que cobra menos de 1000 euros es " + pmileuristas+"%.");
 
     }
 }

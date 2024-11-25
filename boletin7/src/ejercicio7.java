@@ -16,4 +16,24 @@ public class ejercicio7 {
         // devolvemos la matriz resultante
         return resultado;
     }
+    public static int[] copiaMatrizPares(int[] matrizEntrada) {
+        int contador=0;
+        int[] resultado = new int[contador];
+        // hacemos una matriz con el mismo numero de valores que la entrada pero vacios
+        for (int i=0; i<matrizEntrada.length; i++) {
+            if (resultado[i] %2==0) {
+                contador++;
+                resultado[i] = matrizEntrada[i];
+            }
+        }
+        int[] resultado = new int[matrizEntrada.length];
+        // por cada elemento de la matriz original, añadimos el mismo a la matriz resultante
+        for (int i=0; i<matrizEntrada.length; i++) {
+            if (resultado[i] %2==0) {
+                resultado[i] = matrizEntrada[i];
+            }
+        }
+        // devolvemos la matriz resultante
+        return resultado;
+    }
 }

@@ -2,9 +2,10 @@ import java.util.Arrays;
 
 public class ejercicio6 {
     public static void main(String[] args) {
+        // no completado
         int[] ordenada = {1, 2, 5, 7, 10, 13, 15, 19,21};
         //System.out.println(Arrays.toString(seleccionar(ordenada,0,8)));
-        System.out.println(posicion(ordenada,15));
+        System.out.println(posicion(ordenada,15, 0));
         //System.out.println(seleccionar(ordenada, ordenada.length/2, ordenada.length-1)[0]);
         //buscadorEficiente(ordenada,1);
     }
@@ -16,13 +17,13 @@ public class ejercicio6 {
         }
         return resultado;
     }
-    public static int posicion(int[] lista, int valor) {
+    public static int posicion(int[] lista, int valor, int indiceOriginal) {
         if (seleccionar(lista, lista.length/2, lista.length-1)[0] == valor) {
             return 0;
         } else if (seleccionar(lista, lista.length/2, lista.length-1)[0] < valor) {
-            return posicion(seleccionar(lista, lista.length/2, lista.length-1), valor);
+            return posicion(seleccionar(lista, lista.length/2, lista.length-1), valor, lista.length/2);
         } else if (seleccionar(lista, lista.length/2, lista.length-1)[0] > valor) {
-            return posicion(seleccionar(lista, 0, lista.length/2), valor);
+            return posicion(seleccionar(lista, 0, lista.length/2), valor, 0);
         } else {
             return -1;
         }

@@ -2,9 +2,14 @@ import java.util.Arrays;
 
 public class ejercicio10 {
     public static void main(String[] args) {
-        int[] valores = {1, 9 , 5, 5, 7, 10};
-        int[] valoresN = eliminarValor(valores, 5);
-        System.out.println(Arrays.toString(valoresN));
+        int[] valoresDesordenados = {1, 9 , 5, 5, 7, 10};
+        int[] valores1 = eliminarValor(valoresDesordenados, 5);
+        System.out.println(Arrays.toString(valores1));
+
+        int[] valoresOrdenados = {1, 4 , 5, 5, 7, 10};
+        int[] valores2 = eliminarValor(valoresOrdenados, 5);
+        System.out.println(Arrays.toString(valores2));
+
     }
     public static int[] eliminarValor(int[] matrizEntrada, int valorEliminar) {
         // vamos a contar los elementos que no vamos a eliminar
@@ -25,6 +30,36 @@ public class ejercicio10 {
                 contador2++;
             }
         }
+        return matrizResultado;
+    }
+
+    public static int[] eliminarValorOrdenados(int[] matrizEntrada, int valorEliminar) {
+        // contar los elementos distintos de valorEliminar
+        int contadorElementos = 0;
+        // primera pasada para contar cuántos elementos no son el valor a eliminar
+        for (int i = 0; i < matrizEntrada.length; i++) {
+            if (matrizEntrada[i] != valorEliminar) {
+                contadorElementos++;
+            } else {
+                // como el array está ordenado, si encontramos el valorEliminar,
+                // no es necesario continuar si los elementos restantes son iguales.
+                break;
+            }
+        }
+        // crear el array resultado con el tamaño adecuado
+        int[] matrizResultado = new int[contadorElementos];
+        int contador2 = 0;
+        // segunda pasada para llenar el array resultado
+        for (int i = 0; i < matrizEntrada.length; i++) {
+            if (matrizEntrada[i] != valorEliminar) {
+                matrizResultado[contador2] = matrizEntrada[i];
+                contador2++;
+            } else {
+                // mismo criterio, salir temprano en caso de encontrar valorEliminar
+                break;
+            }
+        }
+
         return matrizResultado;
     }
 }

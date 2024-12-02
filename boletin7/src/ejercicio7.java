@@ -16,6 +16,7 @@ public class ejercicio7 {
         // devolvemos la matriz resultante
         return resultado;
     }
+    /*
     public static int[] copiaMatrizPares(int[] matrizEntrada) {
         int contador=0;
         int[] resultado = new int[contador];
@@ -36,4 +37,6 @@ public class ejercicio7 {
         // devolvemos la matriz resultante
         return resultado;
     }
+    */
+
 }

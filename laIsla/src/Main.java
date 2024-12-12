@@ -15,6 +15,10 @@ public class Main {
         //palabras = añadirPalabra(palabras, palabranueva);
         //System.out.println(Arrays.toString(palabras));
 
+        //String[] concursantes = registrarConcursantes();
+        //concursantes = eliminarConcursante("Paula", concursantes);
+        //System.out.println(Arrays.toString(concursantes));
+
     }
 
     /**

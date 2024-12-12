@@ -5,19 +5,31 @@
  */
 public class Main {
     public static void main(String[] args) {
-        //String[] concursantes = registrarConcursantes();
-        //System.out.println(Arrays.toString(concursantes));
-        // String [] palabras = {};
-        // String [] jugadores = {};
-        //String [] palabras = {"Spray para osos", "DJ rojo", "porros"};
-        //mostrarPalabras(palabras);
-        //String palabranueva = "Manuel Guimarey";
-        //palabras = añadirPalabra(palabras, palabranueva);
-        //System.out.println(Arrays.toString(palabras));
 
-        //String[] concursantes = registrarConcursantes();
-        //concursantes = eliminarConcursante("Paula", concursantes);
-        //System.out.println(Arrays.toString(concursantes));
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("   ██▓     ▄▄▄          ██▓  ██████   ██▓     ▄▄▄      ");
+        System.out.println("  ▓██▒    ▒████▄       ▓██▒▒ ██    ▒  ▓██▒    ▒████▄    ");
+        System.out.println("  ▒██░    ▒██  ▀█▄     ▒██▒░  ▓██▄    ▒██░    ▒██  ▀█▄  ");
+        System.out.println("  ▒██░    ░██▄▄▄▄██    ░██░   ▒   ██▒ ▒██░    ░██▄▄▄▄██ ");
+        System.out.println("  ░██████ ▒▓█   ▓██▒   ░██░▒ ██████▒▒ ░██████ ▒▓█   ▓██▒");
+        System.out.println("  ░ ▒░▓   ░▒▒   ▓▒█░   ░▓  ▒  ▒▓▒ ▒ ░ ░ ▒░▓   ░▒▒   ▓▒█░");
+        System.out.println("  ░ ░ ▒   ░ ▒   ▒▒ ░    ▒ ░░  ░▒  ░ ░ ░ ░ ▒   ░ ▒   ▒▒ ░");
+        System.out.println("    ░ ░     ░   ▒       ▒ ░░   ░  ░     ░ ░     ░   ▒   ");
+        System.out.println("      ░   ░     ░  ░    ░         ░       ░   ░     ░  ░");
+
+
+        System.out.println("[?] A que isla vamos a jugar ");
+        String nombreIsla = entrada.next();
+
+        String[] concursantes = registrarConcursantes();
+
+        String[] palabras = new String[1];
+
+        System.out.println("[?] Quien se ha liado el peta? ");
+        String empieza = entrada.next();
+
+        // encontramos el indice del jugador para seguir un órden lógico
 
     }
 
@@ -26,9 +38,9 @@ public class Main {
      * @param palabras
      * @return
      */
-    public static boolean mostrarPalabras (String [] palabras){
+    public static boolean mostrarPalabras (String [] palabras, String nombreIsla){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce un espacio y pulsa enter para rendirte o presiona enter para ver la siguiente");
+        System.out.println("A la isla de .... me llevaria... (espacio + enter para redirte  || enter para continuar)");
 
         for (int i = 0; i < palabras.length; i++){
             System.out.println(palabras[i]);

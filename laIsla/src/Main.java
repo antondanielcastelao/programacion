@@ -5,9 +5,10 @@
  */
 public class Main {
     public static void main(String[] args) {
-
-        String [] palabras = {};
-        String [] jugadores = {};
+        String[] concursantes = registrarConcursantes();
+        System.out.println(Arrays.toString(concursantes));
+        // String [] palabras = {};
+        // String [] jugadores = {};
 
     }
 
@@ -16,6 +17,8 @@ public class Main {
      * @param palabras
      * @return
      */
+
+
     public static boolean mostrarPalabras (String [] palabras){
         Scanner scanner = new Scanner(System.in);
 
@@ -24,6 +27,8 @@ public class Main {
         }
         return palabras;
     }
+
+
 
     /**
      * Registra los nombres de los concursantes que jugarán a la isla
@@ -36,9 +41,14 @@ public class Main {
 
         String[] concursantes = new String[nConcursantes];
 
-        System.out.println("Introduce el nombre del concursante y pulsa enter");
+        System.out.println("[*] Introduce el nombre del concursante y pulsa enter");
         for (int i = 0; i<concursantes.length;i++) {
-            concursantes[i] = entrada.nextLine();
+            String nconcursante = entrada.nextLine();
+            while (nconcursante.isEmpty())
+            {
+                nconcursante = entrada.nextLine();
+            }
+            concursantes[i] = nconcursante;
         }
 
         System.out.println("[+] Concursantes registrados correctamente");

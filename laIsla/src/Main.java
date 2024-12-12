@@ -9,8 +9,11 @@ public class Main {
         //System.out.println(Arrays.toString(concursantes));
         // String [] palabras = {};
         // String [] jugadores = {};
-        String [] palabras = {"Spray para osos", "DJ rojo", "porros"};
-        mostrarPalabras(palabras);
+        //String [] palabras = {"Spray para osos", "DJ rojo", "porros"};
+        //mostrarPalabras(palabras);
+        //String palabranueva = "Manuel Guimarey";
+        //palabras = añadirPalabra(palabras, palabranueva);
+        //System.out.println(Arrays.toString(palabras));
 
     }
 

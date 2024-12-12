@@ -55,4 +55,29 @@ public class Main {
         System.out.println("[+] Concursantes registrados correctamente");
         return concursantes;
     }
+
+    /**
+     * Elimina un concursante si pierde
+     * @params concursante El concursante a eliminar
+     * @params concursantes Lista de concursantes
+     * @return Lista con los concursantes sin el eliminado
+     */
+    public static String[] eliminarConcursante(String concursante, String[] concursantes) {
+        // nuevo array vacío con la longitud de los concursantes -1 (el que eliminamos)
+        String[] nuevoConcursantes = new String[concursantes.length - 1];
+
+        //variable auxiliar contador para indice de nuevoConcursante
+        int c = 0;
+
+        // iteramos la lista concursantes
+        for (int i = 0; i<concursantes.length; i++) {
+            // solo añadimos a la nueva lista si el concursante NO es el eliminado
+            if (!concursantes[i].equals(concursante)) {
+                nuevoConcursantes[c] = concursantes[i];
+                c++;
+            }
+        }
+        return nuevoConcursantes;
+    }
+    // */
 }

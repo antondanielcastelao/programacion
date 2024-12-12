@@ -16,17 +16,32 @@ public class Main {
      * @param palabras
      * @return
      */
-    public static String[] mostrarPalabras (String [] palabras){
+    public static boolean mostrarPalabras (String [] palabras){
+        Scanner scanner = new Scanner(System.in);
+
         for (int i = 0; i < palabras.length; i++){
             System.out.println(palabras[i]);
         }
         return palabras;
     }
 
-    public static String [] añadirPalabras (String [] palabras){
+    /**
+     * Registra los nombres de los concursantes que jugarán a la isla
+     * @return array con los concursantes
+     */
+    public static String[] registrarConcursantes() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("\n [+] Introduce el numero de personas que jugaréis > ");
+        int nConcursantes = entrada.nextInt();
 
+        String[] concursantes = new String[nConcursantes];
 
+        System.out.println("Introduce el nombre del concursante y pulsa enter");
+        for (int i = 0; i<concursantes.length;i++) {
+            concursantes[i] = entrada.nextLine();
+        }
 
+        System.out.println("[+] Concursantes registrados correctamente");
+        return concursantes;
     }
-
 }

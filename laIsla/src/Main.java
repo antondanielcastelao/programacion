@@ -5,10 +5,12 @@
  */
 public class Main {
     public static void main(String[] args) {
-        String[] concursantes = registrarConcursantes();
-        System.out.println(Arrays.toString(concursantes));
+        //String[] concursantes = registrarConcursantes();
+        //System.out.println(Arrays.toString(concursantes));
         // String [] palabras = {};
         // String [] jugadores = {};
+        String [] palabras = {"Spray para osos", "DJ rojo", "porros"};
+        mostrarPalabras(palabras);
 
     }
 
@@ -17,10 +19,9 @@ public class Main {
      * @param palabras
      * @return
      */
-
-
     public static boolean mostrarPalabras (String [] palabras){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un espacio y pulsa enter para rendirte o presiona enter para ver la siguiente");
 
         for (int i = 0; i < palabras.length; i++){
             System.out.println(palabras[i]);

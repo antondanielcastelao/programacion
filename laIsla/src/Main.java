@@ -40,7 +40,7 @@ public class Main {
      */
     public static boolean mostrarPalabras (String [] palabras, String nombreIsla){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("A la isla de .... me llevaria... (espacio + enter para redirte  || enter para continuar)");
+        System.out.println("A la isla de " + nombreIsla + " me llevaria... (espacio + enter para redirte  || enter para continuar)");
 
         for (int i = 0; i < palabras.length; i++){
             System.out.println(palabras[i]);

@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 /**
  * Programa simulador del famoso juego de fumar porros "La Isla"
  * @author Conguchu y Saul
@@ -34,18 +37,51 @@ public class Main {
     }
 
     /**
+     * A partir de un array y un valor dentro del mismo, devuelve su índice
+     * @param palabras Array de las palabras
+     * @param palabraBuscar Palabra que buscaremos
+     * @return El indice de la palabra en ese array
+     */
+    public static int buscarIndice(String[] palabras, String palabraBuscar) {
+        return 0;
+    }
+
+    /**
+     * Función = Añade palabras al array unidimensional [] palabras.
+     * @param palabras Array unidimensional
+     * @param palabra Parámetro que tendrá el valor de las palabras que queramos introducir en el programa
+     * @return la nueva lista, nuevo array que se creará con las nuevas palabras
+     */
+    public static String [] añadirPalabra (String[] palabras, String palabra){
+        String [] nuevasPalabras = new String[palabras.length +1];
+        for (int i = 0; i<palabras.length;i++){
+            nuevasPalabras[i]=palabras[i];
+        }
+        nuevasPalabras[nuevasPalabras.length-1]=palabra;
+        return nuevasPalabras;
+    }
+
+    /**
      * Función = Muestra las palabras del array unidimensional "palabras", declarado en la main.
-     * @param palabras
-     * @return
+     * @param palabras Array de palabras
+     * @param nombreIsla nombre d la isla
+     * @return true si ha pasado la isla false si ha perdido
      */
     public static boolean mostrarPalabras (String [] palabras, String nombreIsla){
         Scanner scanner = new Scanner(System.in);
         System.out.println("A la isla de " + nombreIsla + " me llevaria... (espacio + enter para redirte  || enter para continuar)");
 
         for (int i = 0; i < palabras.length; i++){
-            System.out.println(palabras[i]);
+            String entrada = scanner.nextLine();
+            boolean espacio = entrada.equals(" ");
+            if (espacio){
+                System.out.println("[!] Mala suerte, perdiste");
+                return false;
+            } else if (entrada.isEmpty()){
+                System.out.print(palabras[i]);
+            }
         }
-        return palabras;
+        return true;
     }
 
 
